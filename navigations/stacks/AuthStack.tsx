@@ -5,12 +5,13 @@ import {
 	LoginScreen,
 	RegisterScreen,
 } from "../../screens/auth/index";
+import Tabs from "../tabs/Tabs";
 
 const Stack = createNativeStackNavigator();
 
 export default function AuthStack() {
 	return (
-		<Stack.Navigator screenOptions={{headerBackTitleVisible: false}}>
+		<Stack.Navigator screenOptions={{ headerBackTitleVisible: false }}>
 			<Stack.Screen
 				name="Auth"
 				component={AuthScreen}
@@ -30,6 +31,11 @@ export default function AuthStack() {
 				name="ForgotPasswordScreen"
 				component={ForgotPasswordScreen}
 				options={{ title: "Password Reset" }}
+			/>
+			<Stack.Screen
+				name="TabsScreen"
+				component={Tabs}
+				options={{ headerShown: false }}
 			/>
 		</Stack.Navigator>
 	);

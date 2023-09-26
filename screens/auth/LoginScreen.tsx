@@ -13,9 +13,13 @@ export function LoginScreen({ navigation }: NavigationAndRouteProps) {
 		navigation.navigate("JoinUsScreen");
 	};
 
-const forgetPasswordHandler =()=>{
-	navigation.navigate("ForgotPasswordScreen")
-}
+	const loginHandler = () => {
+		navigation.replace("TabsScreen");
+	};
+
+	const forgetPasswordHandler = () => {
+		navigation.navigate("ForgotPasswordScreen");
+	};
 	return (
 		<View
 			style={[globalStyles.container, globalStyles.bg, styles.container]}
@@ -62,7 +66,7 @@ const forgetPasswordHandler =()=>{
 
 			<FlatButton
 				title="Login"
-				onPress={() => {}}
+				onPress={loginHandler}
 				bg="white"
 				txtColor={globalStyles.bg.backgroundColor}
 				brderColr="white"
