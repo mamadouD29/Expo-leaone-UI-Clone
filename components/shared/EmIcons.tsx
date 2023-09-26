@@ -2,10 +2,12 @@ import { StyleSheet, Text, View } from "react-native";
 import React from "react";
 import {
 	FontAwesome5,
+	FontAwesome,
 	MaterialIcons,
 	AntDesign,
 	Feather,
-
+	Ionicons,
+	Entypo,
 } from "@expo/vector-icons";
 
 interface EmIconsProps {
@@ -38,9 +40,23 @@ export default function EmIcons({ title, size, color }: EmIconsProps) {
 					color={color ?? "black"}
 				/>
 			)}
+			{title === "right" && (
+				<FontAwesome
+					name="angle-right"
+					size={size ?? 24}
+					color={color ?? "black"}
+				/>
+			)}
 			{title === "email" && (
 				<MaterialIcons
 					name="email"
+					size={size ?? 24}
+					color={color ?? "black"}
+				/>
+			)}
+			{title === "cached" && (
+				<MaterialIcons
+					name="science"
 					size={size ?? 24}
 					color={color ?? "black"}
 				/>
@@ -69,6 +85,34 @@ export default function EmIcons({ title, size, color }: EmIconsProps) {
 			{title === "settings" && (
 				<Feather
 					name="settings"
+					size={size ?? 24}
+					color={color ?? "black"}
+				/>
+			)}
+			{title === "checked" && (
+				<Ionicons
+					name="checkmark-circle-sharp"
+					size={size ?? 24}
+					color={color ?? "black"}
+				/>
+			)}
+			{title === "time" && (
+				<Ionicons
+					name="time-outline"
+					size={size ?? 24}
+					color={color ?? "black"}
+				/>
+			)}
+			{title === "fit" && (
+				<Ionicons
+					name="ios-heart-half-sharp"
+					size={size ?? 24}
+					color={color ?? "black"}
+				/>
+			)}
+			{title === "feedback" && (
+				<Entypo
+					name="chat"
 					size={size ?? 24}
 					color={color ?? "black"}
 				/>
