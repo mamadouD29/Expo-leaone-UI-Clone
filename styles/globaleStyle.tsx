@@ -18,4 +18,8 @@ export const globalStyles = StyleSheet.create({
 		alignItems: "center",
 		gap: 5,
 	},
+	txt: {
+		fontSize: 24,
+		opacity: .5
+	}
 });
