@@ -6,14 +6,12 @@ import FlatButton from "../../components/shared/FlatButton";
 import { LoginScreen } from "./LoginScreen";
 import { NavigationAndRouteProps } from "../../services/utils/navigationAndRouteProps";
 
-
-
-export function AuthScreen({navigation}:NavigationAndRouteProps) {
+export function AuthScreen({ navigation }: NavigationAndRouteProps) {
 	const joinUsHandler = () => {
 		navigation.navigate("JoinUsScreen");
 	};
 	const loginHandler = () => {
-		navigation.navigate("LoginScreen")
+		navigation.navigate("LoginScreen");
 	};
 
 	return (
@@ -41,6 +39,7 @@ export function AuthScreen({navigation}:NavigationAndRouteProps) {
 					onPress={loginHandler}
 					ftSize={20}
 					txtColor="#38bdf8"
+					brderColr="white"
 				/>
 				<View style={[globalStyles.hCtr]}>
 					<Text style={[{ fontSize: 24, opacity: 0.6 }]}>
@@ -58,6 +57,6 @@ const styles = StyleSheet.create({
 		backgroundColor: "#38bdf8",
 		paddingHorizontal: 10,
 		gap: 20,
-		justifyContent: "space-around"
+		justifyContent: "space-around",
 	},
 });
